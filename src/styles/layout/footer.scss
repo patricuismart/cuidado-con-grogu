@@ -1,0 +1,15 @@
+.footer {
+  font-family: $font-main;
+  padding: 1.2rem 1.5rem;
+  font-size: 0.8rem;
+  background-color: $dark-grey;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  color: $color-bg;
+  @media all and (min-width: 768px) {
+    font-size: 1rem;
+    padding: 1.3rem;
+  }
+}
