@@ -1,0 +1,13 @@
+.body {
+  background-color: $dark-grey;
+  color: $white;
+  height: 80vh;
+  width: 100%;
+  font-size: 5rem;
+
+  &--content {
+    margin: auto;
+    text-align: center;
+    width: 80%;
+  }
+}

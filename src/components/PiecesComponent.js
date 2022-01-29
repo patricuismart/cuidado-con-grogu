@@ -1,7 +1,11 @@
 import '../styles/main.scss';
 
 const PiecesComponent = () => {
-  return <section>Pieces</section>;
+  return (
+    <main>
+      <h2 className="title">Pieces</h2>
+    </main>
+  );
 };
 
 export default PiecesComponent;

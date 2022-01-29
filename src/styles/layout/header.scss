@@ -2,7 +2,7 @@
   width: 100%;
   padding-top: 1.2rem;
   padding-bottom: 1rem;
-  color: $color-bg;
+  color: $white;
   background-color: $grey;
 
   &--nav {
@@ -17,8 +17,12 @@
       align-items: center;
       height: 12vh;
     }
+    &--nav__link {
+      color: $white;
+    }
   }
   &--section {
+    text-decoration: none;
     cursor: pointer;
     text-align: center;
     padding: 0.5rem;
@@ -30,7 +34,7 @@
     height: 60px;
 
     @media all and (min-width: 768px) {
-      font-size: 2.1rem;
+      font-size: 2.3rem;
       padding: 1rem;
       margin-bottom: 0;
     }

@@ -1,14 +1,14 @@
 .footer {
   width: 100%;
   padding: 1.2rem 1.5rem;
-  font-size: 1.2rem;
-  background-color: $dark-grey;
+  font-size: 1.5rem;
+  background-color: $lightpurple;
   position: fixed;
   left: 0;
   bottom: 0;
-  color: $color-bg;
+  color: $dark-grey;
   @media all and (min-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     padding: 1.5rem;
   }
 }
