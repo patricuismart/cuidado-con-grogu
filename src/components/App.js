@@ -1,4 +1,5 @@
 import '../styles/main.scss';
+import { Routes, Route } from 'react-router-dom';
 
 // Layout
 import Header from './Header';
@@ -9,7 +10,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <MainPage />
+      <main>
+        <MainPage />
+      </main>
+
       <Footer />
     </div>
   );
