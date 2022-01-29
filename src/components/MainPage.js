@@ -1,7 +1,7 @@
 import '../styles/main.scss';
 
 const MainPage = () => {
-  return <main>body</main>;
+  return <main className="body">body</main>;
 };
 
 export default MainPage;
