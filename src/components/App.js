@@ -16,9 +16,9 @@ function App() {
         <Header />
         <Routes>
           <Route exact path="/" element={<MainPage />}></Route>
-          <Route path="/rules" element={<RulesComponent />} />
-          <Route path="/pieces" element={<PiecesComponent />} />
-          <Route path="/game" element={<GameComponent />} />
+          <Route exact path="/rules" element={<RulesComponent />} />
+          <Route exact path="/pieces" element={<PiecesComponent />} />
+          <Route exact path="/game" element={<GameComponent />} />
         </Routes>
       </BrowserRouter>
       <Footer />

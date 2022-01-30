@@ -16,30 +16,32 @@
       justify-items: center;
       align-items: center;
       height: 12vh;
-    }
-    &--nav__link {
-      color: $white;
-    }
-  }
-  &--section {
-    text-decoration: none;
-    cursor: pointer;
-    text-align: center;
-    padding: 0.5rem;
-    background-color: $color-secondary;
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
-    border-radius: 0.5rem;
-    width: 70%;
-    height: 60px;
+      &__buton {
+        outline: none;
+        text-decoration: none;
+        cursor: pointer;
+        text-align: center;
+        padding: 0.5rem;
+        background-color: $color-secondary;
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+        border-radius: 0.5rem;
+        width: 70%;
+        height: 60px;
+        transition: all ease 0.3s;
 
-    @media all and (min-width: 768px) {
-      font-size: 2.3rem;
-      padding: 1rem;
-      margin-bottom: 0;
-    }
-    &:hover {
-      border: solid 0.15rem $aqua;
+        @media all and (min-width: 768px) {
+          font-size: 2.3rem;
+          padding: 1rem;
+          margin-bottom: 0;
+        }
+        &:hover {
+          border: solid 0.15rem $aqua;
+        }
+      }
+      &__link {
+        color: $white;
+      }
     }
   }
 }

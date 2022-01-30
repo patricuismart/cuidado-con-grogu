@@ -6,13 +6,13 @@ const Header = () => {
     <header className="header">
       <nav className="header--nav">
         <NavLink className="header--nav__link" to="/rules">
-          <section className="header--section">Reglas</section>
+          <button className="header--nav__buton">Reglas</button>
         </NavLink>
         <NavLink className="header--nav__link" to="/pieces">
-          <section className="header--section">Fichas</section>
+          <button className="header--nav__buton">Fichas</button>
         </NavLink>
         <NavLink className="header--nav__link" to="/game">
-          <section className="header--section">Juego</section>
+          <button className="header--nav__buton">Juego</button>
         </NavLink>
       </nav>
     </header>
