@@ -1,21 +1,23 @@
 import '../styles/main.scss';
 import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react/cjs/react.development';
+//images
+import yoda from '../images/grogu.png';
 
 const GameComponent = () => {
-  //Initial values before rolling  dice
+  // variable for changing states: cookies, frog, eggs
   const [stateVariable, setStateVariable] = useState([]);
-
+  //Initial values before rolling  dice
   stateVariable.splice(0, 4);
   let grogu = 0;
   let cookies = 3;
   let frogs = 3;
   let eggs = 3;
 
+  // Generate random number between 1-4 (4 dice faces)
   const [min, setMin] = useState(1);
   const [max, setMax] = useState(4);
   const [number, setNumber] = useState('');
-
   const generateNumber = (min, max) => {
     console.log(`El número aleatorio es ${number}`);
     const math = Math.floor(Math.random() * (max - min + 1) + min);
@@ -55,11 +57,13 @@ const GameComponent = () => {
   stateVariable.push(frogs);
   stateVariable.push(eggs);
   stateVariable.push(grogu);
+
   useEffect(() => {
     setNumber(generateNumber(min, max));
   }, []);
 
-  function handleDice() {
+  function handleDice(ev) {
+    ev.preventDefault();
     getValues();
   }
 
@@ -68,7 +72,6 @@ const GameComponent = () => {
       <NavLink to="/">
         <button>Home</button>
       </NavLink>
-      <h1 className="title">Juego</h1>
       <div id="generator">
         <p>Resultado dado: {number}</p>
         <div id="inputContainer">
@@ -81,6 +84,20 @@ const GameComponent = () => {
             />
           </div>
         </div>
+      </div>
+      <img alt="grogu" title="grogu" className="yoda" src={yoda}></img>
+
+      <div>
+        <i className="fas fa-cookie"></i>
+        {cookies}
+      </div>
+      <div>
+        <i className="fas fa-frog"></i>
+        {frogs}
+      </div>
+      <div>
+        <i className="fas fa-egg"></i>
+        {eggs}
       </div>
     </main>
   );

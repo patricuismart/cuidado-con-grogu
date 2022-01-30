@@ -7,36 +7,40 @@
 
   &--nav {
     display: grid;
-    grid-template-columns: 70%;
-    grid-template-rows: 60px 60px 60px;
-    justify-content: center;
+    height: 10vh;
+    font-size: 1.3rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 40px 40px;
+    justify-items: center;
+
     @media all and (min-width: 768px) {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr;
       justify-items: center;
       align-items: center;
-      height: 12vh;
+      height: 15vh;
       &__buton {
-        outline: none;
-        text-decoration: none;
         cursor: pointer;
         text-align: center;
-        padding: 0.5rem;
+        padding: 0.6rem;
         background-color: $color-secondary;
         margin-bottom: 0.5rem;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         border-radius: 0.5rem;
-        width: 70%;
-        height: 60px;
         transition: all ease 0.3s;
 
         @media all and (min-width: 768px) {
-          font-size: 2.3rem;
+          font-size: 2.1rem;
           padding: 1rem;
           margin-bottom: 0;
+          height: 80px;
         }
         &:hover {
           border: solid 0.15rem $aqua;
+        }
+        &:focus {
+          transition: all ease 0.3s;
+          background-color: $blue;
         }
       }
       &__link {
