@@ -8,9 +8,6 @@ const MainPage = () => {
       <NavLink to="/game">
         <button>Empezar nueva aventura</button>
       </NavLink>
-      <NavLink to="/">
-        <button>Home</button>
-      </NavLink>
     </main>
   );
 };
