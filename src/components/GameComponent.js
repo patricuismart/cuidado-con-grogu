@@ -1,69 +1,72 @@
 import '../styles/main.scss';
 import { NavLink } from 'react-router-dom';
-import { useState, useEffect } from 'react/cjs/react.development';
+import { useState } from 'react/cjs/react.development';
 //images
 import yoda from '../images/grogu.png';
 
 const GameComponent = () => {
   // variable for changing states: cookies, frog, eggs
+
   const [stateVariable, setStateVariable] = useState([]);
   //Initial values before rolling  dice
-  stateVariable.splice(0, 4);
-  let grogu = 0;
-  let cookies = 3;
-  let frogs = 3;
-  let eggs = 3;
+  const [gameState, setGameState] = useState({
+    grogu: 0,
+    cookies: 3,
+    frogs: 3,
+    eggs: 3,
+  });
 
-  // Generate random number between 1-4 (4 dice faces)
-  const [min, setMin] = useState(1);
-  const [max, setMax] = useState(4);
+  // State
   const [number, setNumber] = useState('');
+
+  // Math Function radom number
   const generateNumber = (min, max) => {
-    console.log(`El número aleatorio es ${number}`);
     const math = Math.floor(Math.random() * (max - min + 1) + min);
     return math;
   };
 
   const getValues = () => {
-    if (number === 1) {
-      --cookies;
-      if (cookies === 0) {
-        return 'Ya no quedan galletas, sigue tirando!';
+    //Generate radom number beteewn 1 and (4 dices faces)
+    const newNumber = generateNumber(1, 4);
+    console.log(`El número aleatorio es ${newNumber}`);
+    setNumber(newNumber);
+
+    if (newNumber === 1) {
+      if (gameState.cookies === 0) {
+        console.log('Ya no quedan galletas, sigue tirando!');
+      } else {
+        gameState.cookies = gameState.cookies - 1;
       }
-    } else if (number === 2) {
-      --frogs;
-      if (frogs === 0) {
-        return 'Ya no quedan ranas, sigue tirando!';
+    } else if (newNumber === 2) {
+      if (gameState.frogs === 0) {
+        console.log('Ya no quedan ranas, sigue tirando!');
+      } else {
+        gameState.frogs = gameState.frogs - 1;
       }
-    } else if (number === 3) {
-      --eggs;
-      if (eggs === 0) {
-        return 'Ya no quedan huevos, sigue tirando!';
+    } else if (newNumber === 3) {
+      if (gameState.eggs === 0) {
+        console.log('Ya no quedan huevos, sigue tirando!');
+      } else {
+        gameState.eggs = gameState.eggs - 1;
       }
-    } else if (number === 4) {
-      ++grogu;
-      if (grogu === 7) {
-        return 'Grogu ha llegado al armario, fin de la partida!';
+    } else if (newNumber === 4) {
+      if (gameState.grogu === 7) {
+        console.log('Grogu ha llegado al armario, fin de la partida!');
+      } else {
+        gameState.grogu = gameState.grogu + 1;
       }
     }
-    setNumber(generateNumber(min, max));
+    console.log(`Te quedan ${gameState.cookies} galletas`);
+    console.log(`Te quedan ${gameState.frogs} ranas`);
+    console.log(`Te quedan ${gameState.eggs} huevos`);
+    console.log(`Grogu ${gameState.grogu} avances`);
 
-    console.log(`tengo ${cookies} galletas`);
-    console.log(`tengo ${frogs} ranas`);
-    console.log(`tengo ${eggs} huevos`);
-    console.log(`Grogu ${grogu} avances`);
+    setGameState({ ...gameState });
   };
-  stateVariable.push(cookies);
-  stateVariable.push(frogs);
-  stateVariable.push(eggs);
-  stateVariable.push(grogu);
 
-  useEffect(() => {
-    setNumber(generateNumber(min, max));
-  }, []);
+  //Handle function-> on click dice generates random value
 
   function handleDice(ev) {
-    ev.preventDefault();
     getValues();
   }
 
@@ -85,19 +88,22 @@ const GameComponent = () => {
           </div>
         </div>
       </div>
-      <img alt="grogu" title="grogu" className="yoda" src={yoda}></img>
 
       <div>
+        <img alt="grogu" title="grogu" className="yoda" src={yoda}></img>
+        {gameState.grogu}
+      </div>
+      <div>
         <i className="fas fa-cookie"></i>
-        {cookies}
+        {gameState.cookies}
       </div>
       <div>
         <i className="fas fa-frog"></i>
-        {frogs}
+        {gameState.frogs}
       </div>
       <div>
         <i className="fas fa-egg"></i>
-        {eggs}
+        {gameState.eggs}
       </div>
     </main>
   );
