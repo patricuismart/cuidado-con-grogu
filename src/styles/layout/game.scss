@@ -1,6 +1,133 @@
-.yoda {
-  transform: scale(0.4);
-  @media all and (min-width: 768px) {
-    transform: scale(0.7);
+.main {
+  width: 100%;
+  margin: 2rem;
+  right: 0px;
+}
+.container--main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  &--result {
+    width: 100%;
   }
+  .container--result {
+    width: 50%;
+
+    &__paragraf {
+      color: $purple;
+      border: solid $purple 5px;
+      width: 18.5rem;
+      height: 3rem;
+      font-size: 2rem;
+      border-radius: 18px;
+      font-family: $font-main;
+      padding: 0.7rem;
+    }
+  }
+  .container--yoda {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    &__image {
+      width: 25%;
+      vertical-align: middle;
+    }
+    &__text {
+      position: absolute;
+      right: 6rem;
+      top: 400px;
+      color: $purple;
+      border: solid $purple 5px;
+      border-radius: 18px;
+      font-family: $font-main;
+      padding: 0.7rem;
+
+      .item {
+        font-weight: 700;
+        padding: 0.5rem 1rem;
+        font-size: 3rem;
+
+        .fa-cookie,
+        .fa-frog,
+        .fa-egg {
+          vertical-align: middle;
+          margin-left: 2rem;
+          transform: scale(2.5);
+        }
+      }
+    }
+  }
+  .item--text {
+    color: $purple;
+    border: solid $purple 5px;
+    border-radius: 18px;
+    font-family: $font-main;
+    padding: 0.7rem;
+    margin-top: 1rem;
+    width: 420px;
+    font-size: 2rem;
+  }
+  .buton--reload {
+    color: $purple;
+    background-color: white;
+    border: solid $purple 5px;
+    width: 8.5rem;
+    height: 3rem;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    border-radius: 18px;
+    font-family: $font-main;
+    text-align: center;
+    transition: background-color 0.5s ease;
+  }
+  .buton:hover {
+    background-color: $grey;
+    color: white;
+  }
+
+  .buton--dice {
+    cursor: pointer;
+    color: white;
+    background-color: $purple;
+    border: solid $purple 2px;
+    width: 10rem;
+    margin: 1rem 2rem 1rem 0;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    border-radius: 18px;
+    padding: 0.5rem;
+    font-family: $font-main;
+    text-align: center;
+    transition: background-color 0.5s ease;
+  }
+  .buton--dice:hover {
+    background-color: $grey;
+    color: white;
+  }
+}
+
+.yoda {
+  width: 100%;
+}
+.buton--home {
+  position: absolute;
+  right: 4rem;
+  cursor: pointer;
+  color: $purple;
+  background-color: $white;
+  border: solid $purple 2px;
+  margin: 0rem 2rem 1rem 0;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  border-radius: 18px;
+  padding: 0.5rem;
+  font-family: $font-main;
+  text-align: center;
+  transition: background-color 0.5s ease;
+}
+.buton--home:hover {
+  background-color: $grey;
+  color: white;
 }

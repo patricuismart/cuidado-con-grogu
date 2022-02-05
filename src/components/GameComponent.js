@@ -100,42 +100,46 @@ const GameComponent = () => {
   }
 
   return (
-    <main>
+    <main className="main">
       <NavLink to="/">
-        <button>Home</button>
+        <button className="buton--home">Home</button>
       </NavLink>
-      <div id="generator">
-        <p>Resultado dado: {number}</p>
-        <div id="inputContainer">
-          <div id="inputs">
-            <input
-              id="generate"
-              type="submit"
-              value="Dado"
-              onClick={handleDice}
-            />
-          </div>
+      <div className="container--main">
+        <div className="container--result">
+          <p className="container--result__paragraf">
+            Resultado dado: {number}
+          </p>
+          <input
+            className="buton--dice"
+            id="generate"
+            type="button"
+            value="Dado"
+            onClick={handleDice}
+          />
+          <button className="buton--reload" onClick={handleReset}>
+            Reload
+          </button>
         </div>
-      </div>
+        <div className="container--yoda">
+          <div className="container--yoda__image">
+            <img alt="grogu" title="grogu" className="yoda" src={yoda}></img>
+          </div>
 
-      <div>
-        <img alt="grogu" title="grogu" className="yoda" src={yoda}></img>
-        <p>Grogu {gameState.grogu} avances</p>
-      </div>
-      <div>
-        <p>
-          Te quedan {gameState.cookies} <i className="fas fa-cookie"></i>
-        </p>
-      </div>
-      <div>
-        <p>
-          Te quedan {gameState.frogs} <i className="fas fa-frog"></i>
-        </p>
-      </div>
-      <div>
-        <p>
-          Te quedan {gameState.eggs} <i className="fas fa-egg"></i>
-        </p>
+          <p className="item--text">Grogu {gameState.grogu} avances</p>
+        </div>
+        <div className="container--yoda__text">
+          <p className="item">
+            {gameState.cookies} <i className="fas fa-cookie"></i>
+          </p>
+
+          <p className="item">
+            {gameState.frogs} <i className="fas fa-frog"></i>
+          </p>
+
+          <p className="item">
+            {gameState.eggs} <i className="fas fa-egg"></i>
+          </p>
+        </div>
       </div>
     </main>
   );

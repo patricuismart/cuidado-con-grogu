@@ -19,9 +19,12 @@ a:link,
 a:visited,
 a:active {
   text-decoration: none;
+  color: inherit;
 }
+
 input,
-button,
-submit {
+button {
   border: none;
+  text-decoration: none;
+  color: inherit;
 }
