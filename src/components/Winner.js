@@ -7,7 +7,7 @@ const Winner = (stateWinner, setStatestateWinner) => {
       {/* Expression wonder if there's an state and it is true show this content */}
       {stateWinner && (
         <div className="">
-          <p className="">ESTOY DENTRO</p>
+          <p className="">¡BIEN, Mando completa la misión, Has ganado!</p>
           <NavLink to="/">
             <button className="buton--home">Home</button>
           </NavLink>
