@@ -6,7 +6,7 @@ const MainPage = () => {
     <main className="body">
       <h1 className="body--content">Cuidado con Grogu!</h1>
       <NavLink to="/game">
-        <button>Empezar nueva aventura</button>
+        <button className="button--game">Empezar nueva aventura</button>
       </NavLink>
     </main>
   );
