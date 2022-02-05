@@ -1,9 +1,10 @@
 # ¡Cuidado con Grogu!
 ### Hey, I'm [Patricia](https://github.com/patricuismart)! and this a Technical test for [Seedtag](https://github.com/seedtag) <img src="https://raw.githubusercontent.com/iampavangandhi/iampavangandhi/master/gifs/Hi.gif" width="30px"></h2>
 <img  alt="GIF" src="https://www.gifmaniacos.es/wp-content/uploads/2021/03/gifmaniacos.es-15-2.gif" />
-📍 This project is a game developed and design as a SPA.
+📍 This project is a SPA that simulates the behaviour of a game- developed and design with React.
 
-## Components and main structure:
+## Components and Layout:
+Build with React Router Dom.
 
 - App
   - Header
@@ -32,7 +33,6 @@
 
 
 
-
 ### &nbsp;Tech Stack 🛠
 
 🔧 ![React](https://img.shields.io/badge/-React-333333?style=flat&logo=react)&nbsp;
@@ -46,10 +46,20 @@
 
 ✍️ ![Visual Studio Code](https://img.shields.io/badge/-Visual%20Studio%20Code-333333?style=flat&logo=visual-studio-code&logoColor=007ACC)&nbsp;
 
+## Startup guide
 
----
+> **NOTE:** You need to install [Node JS](https://nodejs.org/) to run this project.
 
-### &nbsp;Connect with Me 🤝🏻
+### Steps to run the project:
+
+Once we have installed the dependencies, we are going to start the project. **The project must be started every time you start programming.** To do this, execute the command:
+
+```bash
+npm start
+```
+
+## Do you miss something in particular? Tell me how to improve it!
+### &nbsp;Get in touch 🤝🏻
 
 💬 &nbsp; Feel free to reach out to me for consulting, or just for some interesting discussion.\
 📫 &nbsp; You can shoot me an email at patricuismart@gmail.com ! I'll try to respond as soon as I can.\
