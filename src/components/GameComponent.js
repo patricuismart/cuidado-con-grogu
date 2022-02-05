@@ -14,7 +14,6 @@ const GameComponent = () => {
   });
 
   const [number, setNumber] = useState('');
-  const [userMessage, setUserMessage] = useState(false);
 
   // Math Function gettoing radom number
   const generateNumber = (min, max) => {
@@ -121,21 +120,16 @@ const GameComponent = () => {
           </button>
         </div>
         <div className="container--yoda">
-          <div className="container--yoda__image">
-            <img alt="grogu" title="grogu" className="yoda" src={yoda}></img>
-          </div>
-
+          <img alt="grogu" title="grogu" className="yoda" src={yoda}></img>
           <p className="item--text">Grogu {gameState.grogu} avances</p>
         </div>
         <div className="container--yoda__text">
           <p className="item">
             {gameState.cookies} <i className="fas fa-cookie"></i>
           </p>
-
           <p className="item">
             {gameState.frogs} <i className="fas fa-frog"></i>
           </p>
-
           <p className="item">
             {gameState.eggs} <i className="fas fa-egg"></i>
           </p>

@@ -31,7 +31,6 @@
     flex-wrap: wrap;
 
     &__image {
-      width: 25%;
       vertical-align: middle;
     }
     &__text {
@@ -58,6 +57,9 @@
         }
       }
     }
+  }
+  .yoda {
+    width: 20%;
   }
   .item--text {
     color: $purple;
@@ -108,9 +110,6 @@
   }
 }
 
-.yoda {
-  width: 100%;
-}
 .buton--home {
   position: absolute;
   right: 4rem;
