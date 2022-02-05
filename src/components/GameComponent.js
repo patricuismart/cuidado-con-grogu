@@ -1,10 +1,14 @@
 import '../styles/main.scss';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react/cjs/react.development';
+
+// User wins game component
+import Winner from './Winner';
+
 //images
 import yoda from '../images/grogu.png';
 
-const GameComponent = () => {
+const GameComponent = (props) => {
   //Initial values before rolling  dice
   const [gameState, setGameState] = useState({
     grogu: 0,
@@ -14,6 +18,7 @@ const GameComponent = () => {
   });
 
   const [number, setNumber] = useState('');
+  const [stateWinner, setstateWinner] = useState(false);
 
   // Math Function gettoing radom number
   const generateNumber = (min, max) => {
@@ -35,15 +40,14 @@ const GameComponent = () => {
   };
 
   //Comprobación de si ya tenemos el armario a 0
-  const winner = () => {
+  const winnerMode = () => {
     if (
       gameState.cookies === 0 &&
       gameState.frogs === 0 &&
       gameState.eggs === 0
     ) {
       console.log('¡BIEN, Mando completa la misión, Has ganado!');
-      alert('¡BIEN, Mando completa la misión, Has ganado!');
-      handleReset();
+      setstateWinner(true);
     }
   };
 
@@ -93,9 +97,10 @@ const GameComponent = () => {
 
   //Handle function-> on click dice generates random value
 
-  function handleDice(ev) {
+  function handleDice() {
     getValues();
-    winner();
+    props.openWinner();
+    winnerMode();
   }
 
   return (
@@ -103,7 +108,7 @@ const GameComponent = () => {
       <NavLink to="/">
         <button className="buton--home">Home</button>
       </NavLink>
-      <div className="container--main">
+      <div className="container--game">
         <div className="container--result">
           <p className="container--result__paragraf">
             Resultado dado: {number}
@@ -135,6 +140,7 @@ const GameComponent = () => {
           </p>
         </div>
       </div>
+      <Winner stateWinner={stateWinner} setstateWinner={setstateWinner} />
     </main>
   );
 };
