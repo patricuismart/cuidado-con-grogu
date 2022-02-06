@@ -18,7 +18,7 @@ const GameComponent = (props) => {
   });
 
   const [number, setNumber] = useState('');
-  const [stateWinner, setstateWinner] = useState(false);
+  const [stateWinner, setStateWinner] = useState(false);
 
   // Math Function gettoing radom number
   const generateNumber = (min, max) => {
@@ -47,7 +47,7 @@ const GameComponent = (props) => {
       gameState.eggs === 0
     ) {
       console.log('¡BIEN, Mando completa la misión, Has ganado!');
-      setstateWinner(true);
+      setStateWinner(true);
     }
   };
 
@@ -99,7 +99,6 @@ const GameComponent = (props) => {
 
   function handleDice() {
     getValues();
-    props.openWinner();
     winnerMode();
   }
 
@@ -140,7 +139,7 @@ const GameComponent = (props) => {
           </p>
         </div>
       </div>
-      <Winner stateWinner={stateWinner} setstateWinner={setstateWinner} />
+      <Winner stateWinner={stateWinner} setStateWinner={setStateWinner} />
     </main>
   );
 };
