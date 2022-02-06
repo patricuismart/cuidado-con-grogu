@@ -51,7 +51,6 @@ const GameComponent = () => {
     ) {
       console.log('¡BIEN, Mando completa la misión, Has ganado!');
       setStateWinner(true);
-      handleReset();
     }
   };
 
@@ -165,7 +164,7 @@ const GameComponent = () => {
           </p>
         </div>
       </section>
-      {/* <Winner stateWinner={stateWinner} setStateWinner={setStateWinner} /> */}
+      {stateWinner && <Winner className="winner" />}
     </>
   );
 };
