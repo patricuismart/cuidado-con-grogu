@@ -9,7 +9,7 @@ const Winner = (stateWinner, setStatestateWinner) => {
         <div className="">
           <p className="">¡BIEN, Mando completa la misión, Has ganado!</p>
           <NavLink to="/">
-            <button className="buton--home">Home</button>
+            <button className="button--home">Home</button>
           </NavLink>
         </div>
       )}

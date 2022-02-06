@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
   &--result {
     width: 100%;
   }
@@ -24,11 +25,15 @@
       padding: 0.7rem;
     }
   }
-  .container--yoda {
+  .hidden {
+    display: none;
+  }
+  .grogu {
     width: 65%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    display: no;
 
     &__image {
       vertical-align: middle;
@@ -58,9 +63,7 @@
       }
     }
   }
-  .yoda {
-    width: 20%;
-  }
+
   .item--text {
     color: $purple;
     border: solid $purple 5px;

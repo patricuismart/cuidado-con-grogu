@@ -1,4 +1,4 @@
-import '../styles/main.scss';
+import styles from '../styles/main.scss';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react/cjs/react.development';
 
@@ -6,9 +6,9 @@ import { useState } from 'react/cjs/react.development';
 import Winner from './Winner';
 
 //images
-import yoda from '../images/grogu.png';
+import grogu from '../images/grogu.png';
 
-const GameComponent = (props) => {
+const GameComponent = () => {
   //Initial values before rolling  dice
   const [gameState, setGameState] = useState({
     grogu: 0,
@@ -17,16 +17,18 @@ const GameComponent = (props) => {
     eggs: 3,
   });
 
+  // States
   const [number, setNumber] = useState('');
   const [stateWinner, setStateWinner] = useState(false);
 
-  // Math Function gettoing radom number
+  //***FUNCTIONS***//
+  // Math Function for random number
   const generateNumber = (min, max) => {
     const math = Math.floor(Math.random() * (max - min + 1) + min);
     return math;
   };
 
-  // función reset reload game
+  // function reset & reload game
   const handleReset = () => {
     window.location.reload(true);
   };
@@ -39,7 +41,7 @@ const GameComponent = (props) => {
     alert('Grogu se ha comido todo, Vuelve a intentarlo!');
   };
 
-  //Comprobación de si ya tenemos el armario a 0
+  //Test empty stock of food, if yes, user wins
   const winnerMode = () => {
     if (
       gameState.cookies === 0 &&
@@ -95,13 +97,12 @@ const GameComponent = (props) => {
     setGameState({ ...gameState });
   };
 
-  //Handle function-> on click dice generates random value
-
+  //Handle function-> on click dice generates random value & test if empty stock of food
   function handleDice() {
     getValues();
     winnerMode();
   }
-
+  //***RENDER***//
   return (
     <main className="main">
       <NavLink to="/">
@@ -123,8 +124,13 @@ const GameComponent = (props) => {
             Reload
           </button>
         </div>
-        <div className="container--yoda">
-          <img alt="grogu" title="grogu" className="yoda" src={yoda}></img>
+        <div className="container--grogu">
+          <img
+            alt="grogu"
+            title="grogu"
+            className={gameState.grogu === 0 ? styles.grogu : styles.hidden}
+            src={grogu}
+          ></img>
           <p className="item--text">Grogu {gameState.grogu} avances</p>
         </div>
         <div className="container--yoda__text">
