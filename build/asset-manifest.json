@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e1654ce5.css",
+    "main.js": "/static/js/main.ef49bcc2.js",
+    "static/media/GroguGameover.gif": "/static/media/GroguGameover.82a3e1e2512338429292.gif",
+    "static/media/mandoWins.gif": "/static/media/mandoWins.65fe123285f9238ce96f.gif",
+    "static/media/grogu.png": "/static/media/grogu.b3890cd2c01d1d3c8cc7.png",
+    "index.html": "/index.html",
+    "main.e1654ce5.css.map": "/static/css/main.e1654ce5.css.map",
+    "main.ef49bcc2.js.map": "/static/js/main.ef49bcc2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e1654ce5.css",
+    "static/js/main.ef49bcc2.js"
+  ]
+}

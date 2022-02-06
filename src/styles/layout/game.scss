@@ -30,11 +30,21 @@
   margin: 1rem;
   font-size: 1.1rem;
 }
-.grogu-image {
+.grogu_image {
   grid-column: 1/1;
   grid-row: 2/3;
   width: 100%;
 }
+.grogu_avances {
+  margin: auto;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  background-color: $orange;
+}
+
 .buton-dice {
   grid-column: 1/1;
   grid-row: 3/4;

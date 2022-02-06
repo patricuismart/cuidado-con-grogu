@@ -1,10 +1,10 @@
-import styles from '../styles/main.scss';
-import { NavLink } from 'react-router-dom';
+import style from '../styles/main.scss';
 import { useState } from 'react/cjs/react.development';
 
 // User wins game component
 import Winner from './Winner';
 import GameOver from './Gameover';
+import GroguAvances from './GorguAvances';
 
 //images
 import grogu from '../images/grogu.png';
@@ -23,6 +23,7 @@ const GameComponent = () => {
   const [stateWinner, setStateWinner] = useState(false);
   const [stateGameover, setStateGameover] = useState(false);
   const [userMessage, setUserMessage] = useState('');
+  const [groguAvances, setGroguAvances] = useState(-1);
 
   //***FUNCTIONS***//
   // Math Function for random number
@@ -36,9 +37,13 @@ const GameComponent = () => {
     window.location.reload(true);
   };
 
+  const handleToggleShow = (ev) => {
+    ev.preventDefault();
+    setGroguAvances(!setGroguAvances);
+  };
+
   // User Game Over, grogu eats all food
   const gameoverMode = () => {
-    console.log('Grogu se ha comido todo, Vuelve a intentarlo!');
     setStateGameover(true);
   };
 
@@ -49,7 +54,6 @@ const GameComponent = () => {
       gameState.frogs === 0 &&
       gameState.eggs === 0
     ) {
-      console.log('¡BIEN, Mando completa la misión, Has ganado!');
       setStateWinner(true);
     }
   };
@@ -57,7 +61,6 @@ const GameComponent = () => {
   const getValues = () => {
     //Generate radom number beteewn 1 and (4 dices faces)
     const newNumber = generateNumber(1, 4);
-    console.log(`El número aleatorio es ${newNumber}`);
     setNumber(newNumber);
 
     // Lets play, Game options counter
@@ -97,11 +100,6 @@ const GameComponent = () => {
         gameState.grogu = gameState.grogu + 1;
       }
     }
-    console.log(`Te quedan ${gameState.cookies} galletas`);
-    console.log(`Te quedan ${gameState.frogs} ranas`);
-    console.log(`Te quedan ${gameState.eggs} huevos`);
-    console.log(`Grogu ${gameState.grogu} avances`);
-
     setGameState({ ...gameState });
     winnerMode();
   };
@@ -142,7 +140,7 @@ const GameComponent = () => {
         <img
           alt="grogu"
           title="grogu"
-          className="grogu-image"
+          className="grogu_image"
           src={grogu}
         ></img>
         <div className="piece1"></div>
