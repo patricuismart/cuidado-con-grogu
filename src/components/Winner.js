@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import '../styles/main.scss';
 import mandoWins from '../images/mandoWins.gif';
 
-const Winner = (handleReset) => {
+const Winner = ({ handleReset }) => {
   return (
     <>
       <div className="modal">

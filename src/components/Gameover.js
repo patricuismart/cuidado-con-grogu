@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import '../styles/main.scss';
 import GroguGameover from '../images/GroguGameover.gif';
 
-const Gameover = (handleReset) => {
+const Gameover = ({ handleReset }) => {
   return (
     <>
       <div className="modal">
