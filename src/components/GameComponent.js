@@ -4,6 +4,7 @@ import { useState } from 'react/cjs/react.development';
 
 // User wins game component
 import Winner from './Winner';
+import GameOver from './Gameover';
 
 //images
 import grogu from '../images/grogu.png';
@@ -20,6 +21,7 @@ const GameComponent = () => {
   // States
   const [number, setNumber] = useState('');
   const [stateWinner, setStateWinner] = useState(false);
+  const [stateGameover, setStateGameover] = useState(false);
   const [userMessage, setUserMessage] = useState('');
 
   //***FUNCTIONS***//
@@ -34,12 +36,10 @@ const GameComponent = () => {
     window.location.reload(true);
   };
 
-  // GameOver
-
-  const gameOver = () => {
-    handleReset();
+  // User Game Over, grogu eats all food
+  const gameoverMode = () => {
     console.log('Grogu se ha comido todo, Vuelve a intentarlo!');
-    alert('Grogu se ha comido todo, Vuelve a intentarlo!');
+    setStateGameover(true);
   };
 
   //Test empty stock of food, if yes, user wins
@@ -92,7 +92,7 @@ const GameComponent = () => {
     } else if (newNumber === 4) {
       setUserMessage('Grogu avanza, sigue tirando!');
       if (gameState.grogu === 6) {
-        gameOver();
+        gameoverMode();
       } else {
         gameState.grogu = gameState.grogu + 1;
       }
@@ -166,6 +166,9 @@ const GameComponent = () => {
       </section>
       {/* Expression wonder if there's an state and it is true show this content */}
       {stateWinner && <Winner handleReset={handleReset} className="winner" />}
+      {stateGameover && (
+        <GameOver handleReset={handleReset} className="winner" />
+      )}
     </>
   );
 };
