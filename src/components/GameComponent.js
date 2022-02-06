@@ -164,7 +164,8 @@ const GameComponent = () => {
           </p>
         </div>
       </section>
-      {stateWinner && <Winner className="winner" />}
+      {/* Expression wonder if there's an state and it is true show this content */}
+      {stateWinner && <Winner handleReset={handleReset} className="winner" />}
     </>
   );
 };

@@ -1,15 +1,18 @@
 import { NavLink } from 'react-router-dom';
-import '../styles/layout/winner.scss';
+import '../styles/main.scss';
+import mandoWins from '../images/mandoWins.gif';
 
-const Winner = () => {
+const Winner = (handleReset) => {
   return (
     <>
-      {/* Expression wonder if there's an state and it is true show this content */}
-
-      <div className="">
-        <p className="">¡BIEN, Mando completa la misión, Has ganado!</p>
+      <div className="modal">
+        <NavLink to="/game">
+          <i onClick={handleReset} className="fas fa-times-circle icon"></i>
+        </NavLink>
+        <img className="gif" alt="You Win" src={mandoWins} />
+        <p className="text">¡BIEN, Mando completa la misión, Has ganado!</p>
         <NavLink to="/">
-          <button className="button--home">Home</button>
+          <button className="button-home">Home</button>
         </NavLink>
       </div>
     </>
