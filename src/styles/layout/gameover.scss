@@ -1,4 +1,4 @@
-.modal {
+.modal-gameover {
   @include modal();
   text-align: center;
   background-color: rgba($color: rgb(207, 111, 55), $alpha: 0.8);
@@ -26,6 +26,7 @@
   }
   .gif {
     width: 50%;
+    height: 80%;
     border-radius: 20px;
   }
   .text {

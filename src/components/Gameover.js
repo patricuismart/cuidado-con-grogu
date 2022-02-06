@@ -5,7 +5,7 @@ import GroguGameover from '../images/GroguGameover.gif';
 const Gameover = ({ handleReset }) => {
   return (
     <>
-      <div className="modal">
+      <div className="modal-gameover">
         <NavLink to="/game">
           <i onClick={handleReset} className="fas fa-times-circle icon"></i>
         </NavLink>

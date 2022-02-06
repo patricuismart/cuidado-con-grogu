@@ -1,0 +1,8 @@
+.text {
+  margin: 2rem;
+  @include text();
+
+  .button-home {
+    @include button();
+  }
+}

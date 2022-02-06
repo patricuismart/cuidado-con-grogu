@@ -165,7 +165,7 @@ const GameComponent = () => {
       {/* Expression wonder if there's an state and it is true show this content */}
       {stateWinner && <Winner handleReset={handleReset} className="winner" />}
       {stateGameover && (
-        <GameOver handleReset={handleReset} className="winner" />
+        <GameOver handleReset={handleReset} className="gameover" />
       )}
     </>
   );
