@@ -3,7 +3,7 @@
 <img  alt="GIF" src="https://www.gifmaniacos.es/wp-content/uploads/2021/03/gifmaniacos.es-15-2.gif" />
 📍 This project is a SPA that simulates the behaviour of a game- developed and design with React.
 
-The game is very simple. We will have 6 boxes that represent a path in the Razor Crest cargo area that leads to the locker where the merchandise is safe. The user has to to secure the merch before Grogu reachs the locker! GOOD LUCK!
+The game is very simple. We will have 6 boxes that represent a path in the Razor Crest cargo area that leads to the locker where the merchandise is safe. The user has to to secure the merch before Grogu reachs the locker! ROLL DICE, GET A RANDOM NUMBER & GOOD LUCK!
 
 ## Components and Layout:
 Build with React Router Dom.
