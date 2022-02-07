@@ -2,18 +2,17 @@ import '../styles/main.scss';
 import { NavLink } from 'react-router-dom';
 const RulesComponent = () => {
   return (
-    <main>
+    <main className="text">
       <NavLink to="/">
         <button className="button-home">Home</button>
       </NavLink>
       <h1 className="title">Reglas del juego</h1>
-      <div className="text">
+      <div>
         El juego es muy sencillo. Dispondremos de 6 casillas que representan un
         camino en la zona de carga de la Razor Crest que lleva hasta el armario
         donde se encuentra segura la mercancía. De este modo tendremos 7
         casillas, 6 del camino y una que representa al armario: 🔲🔲🔲🔲🔲🔲❎
-        <p>
-          {' '}
+        <p className="text">
           Durante el viaje has hecho muy bien tu trabajo pero ahora debes vaciar
           el armario. Para ello deberás descargar la mercancía poco a poco. Este
           es el momento más delicado ya que Grogu puede aprovechar y llegar
@@ -36,7 +35,7 @@ const RulesComponent = () => {
         <p>Descargas un huevo de rana (con mucho cuidado) 🥚</p>
         <p>Descargas una rana 🐸</p> <p>Grogu se mueve una casilla 👣</p>
         <p>Además habrá una ficha que represente dónde está Grogu.</p>
-        <p>
+        <p className="text-end">
           Ganarás el juego si consigues descargar toda la mercancía. Perderás si
           Grogu llega a la última casilla (el armario).
         </p>
