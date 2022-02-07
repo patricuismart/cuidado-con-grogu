@@ -7,7 +7,7 @@ const PiecesComponent = () => {
       <NavLink to="/">
         <button className="button-home">Home</button>
       </NavLink>
-      <h1 className="title">Fichas</h1>{' '}
+      <h1 className="title">Fichas</h1>
       <div className="text">
         <p className="title">Ficha de zona de carga (x6)</p>
         <p>ficha de armario (x1) </p>

@@ -15,10 +15,10 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route exact path="/" element={<MainPage />}></Route>
           <Route exact path="/rules" element={<RulesComponent />} />
           <Route exact path="/pieces" element={<PiecesComponent />} />
-          <Route exact path="/game" element={<GameComponent />} />
+          <Route exact path="/game" element={<GameComponent />} />{' '}
+          <Route exact path="/" element={<MainPage />}></Route>
         </Routes>
       </BrowserRouter>
       <Footer />
