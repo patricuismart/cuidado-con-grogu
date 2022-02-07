@@ -9,7 +9,7 @@ const PiecesComponent = () => {
       </NavLink>
       <h1 className="title">Fichas</h1>{' '}
       <div className="text">
-        <p className="title">Ficha de zona de carga (x6)</p>{' '}
+        <p className="title">Ficha de zona de carga (x6)</p>
         <p>ficha de armario (x1) </p>
         <p>ficha de recipiente (x3)</p> <p>cajas de galletas (x3)</p>
         <p>ranas (x3)</p>
