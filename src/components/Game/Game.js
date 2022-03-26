@@ -34,8 +34,7 @@ const GameComponent = () => {
   };
 
   const handleReset = () => {
-    //window.location.reload(true);
-    setGameState();
+    setGameState({ grogu: 0, cookies: 3, frogs: 3, eggs: 3 });
   };
 
   const gameoverMode = () => {
@@ -93,7 +92,6 @@ const GameComponent = () => {
 
   function handleDice() {
     getValues();
-    // winnerMode();
     checkUserWins();
   }
 
