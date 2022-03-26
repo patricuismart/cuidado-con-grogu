@@ -2,9 +2,9 @@ import style from '../styles/main.scss';
 import { useState } from 'react/cjs/react.development';
 
 // User wins game component
-import Winner from './Winner';
-import GameOver from './Gameover';
-import GroguAvances from './GorguAvances';
+import Winner from '../Winner/Winner';
+import GameOver from '../GameOver/Gameover';
+import GroguAvances from '../GorguAvances';
 
 //images
 import grogu from '../images/grogu.png';
@@ -68,7 +68,6 @@ const GameComponent = () => {
     if (newNumber === 1) {
       setUserMessage('Descargas galleta, sigue tirando!');
       if (gameState.cookies === 0) {
-        console.log('Ya no quedan galletas, sigue tirando!');
         setUserMessage('Ya no quedan galletas, sigue tirando!');
       } else {
         gameState.cookies = gameState.cookies - 1;
@@ -77,7 +76,6 @@ const GameComponent = () => {
     } else if (newNumber === 2) {
       setUserMessage('Descargas rana, sigue tirando!');
       if (gameState.frogs === 0) {
-        console.log('Ya no quedan ranas, sigue tirando!');
         setUserMessage('Ya no quedan ranas, sigue tirando!');
       } else {
         gameState.frogs = gameState.frogs - 1;
@@ -86,7 +84,6 @@ const GameComponent = () => {
     } else if (newNumber === 3) {
       setUserMessage('Descargas huevo, sigue tirando!');
       if (gameState.eggs === 0) {
-        console.log('Ya no quedan huevos, sigue tirando!');
         setUserMessage('Ya no quedan huevos, sigue tirando!');
       } else {
         gameState.eggs = gameState.eggs - 1;
