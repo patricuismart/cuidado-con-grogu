@@ -26,8 +26,6 @@ const GameComponent = () => {
   const [stateGameover, setStateGameover] = useState(false);
   const [userMessage, setUserMessage] = useState('');
 
-  //***FUNCTIONS***//
-
   const generateRandomNumber = () => {
     const max = 4;
     const min = 1;
@@ -82,11 +80,7 @@ const GameComponent = () => {
   };
 
   const getValues = () => {
-    //Generate radom number beteewn 1 and (4 dices faces)
     const newNumber = generateRandomNumber();
-
-    // Lets play, Game options counter
-    // case 1 cookies
 
     if (newNumber === 1 || newNumber === 2 || newNumber === 3) {
       manageStock(newNumber);
@@ -96,50 +90,14 @@ const GameComponent = () => {
 
     setGameState({ ...gameState });
     checkUserWins();
-
-    // if (newNumber === 1) {
-    //   setUserMessage('Descargas galleta, sigue tirando!');
-    //   if (gameState.cookies === 0) {
-    //     setUserMessage('Ya no quedan galletas, sigue tirando!');
-    //   } else {
-    //     gameState.cookies = gameState.cookies - 1;
-    //   }
-    //   // case 2 frogs
-    // } else if (newNumber === 2) {
-    //   setUserMessage('Descargas rana, sigue tirando!');
-    //   if (gameState.frogs === 0) {
-    //     setUserMessage('Ya no quedan ranas, sigue tirando!');
-    //   } else {
-    //     gameState.frogs = gameState.frogs - 1;
-    //   }
-    //   // case 3 eggs
-    // } else if (newNumber === 3) {
-    //   setUserMessage('Descargas huevo, sigue tirando!');
-    //   if (gameState.eggs === 0) {
-    //     setUserMessage('Ya no quedan huevos, sigue tirando!');
-    //   } else {
-    //     gameState.eggs = gameState.eggs - 1;
-    //   }
-    //   // case 4 grogu
-    // } else if (newNumber === 4) {
-    //   setUserMessage('Grogu avanza, sigue tirando!');
-    //   if (gameState.grogu === 6) {
-    //     gameoverMode();
-    //   } else {
-    //     gameState.grogu = gameState.grogu + 1;
-    //   }
-    // }
-    // setGameState({ ...gameState });
-    // winnerMode();
   };
 
-  //Handle function-> on click dice generates random value & test if empty stock of food
   function handleDice() {
     getValues();
     // winnerMode();
     checkUserWins();
   }
-  //***RENDER***//
+
   return (
     <>
       <section className="board">
