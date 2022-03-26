@@ -13,7 +13,6 @@ const GroguProfile = () => {
 };
 
 const GameComponent = () => {
-  console.log('Game');
   const [gameState, setGameState] = useState({
     grogu: 0,
     cookies: 3,
