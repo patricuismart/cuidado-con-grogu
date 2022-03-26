@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import './winner.scss';
-import mandoWins from '../images/mandoWins.gif';
+import mandoWins from '../../images/mandoWins.gif';
 
 const Winner = ({ handleReset }) => {
   return (

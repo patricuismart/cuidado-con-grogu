@@ -6,26 +6,26 @@
   grid-template-rows: 0.5fr 1fr 0.5fr;
 }
 @mixin piece-color {
-  background-color: $blue;
+  background-color: blue;
   border-radius: 10px;
   margin: 1rem;
 }
 @mixin button {
   cursor: pointer;
-  border: solid $purple 5px;
+  border: solid purple 5px;
   margin: 1rem 1rem;
   font-size: 1.5rem;
   border-radius: 18px;
   padding: 0.3rem;
-  font-family: $font-main;
+  // font-family: $font-main;
   text-align: center;
   transition: background-color 0.5s ease;
 }
 @mixin text {
-  color: $purple;
-  border: solid $purple 5px;
+  color: purple;
+  border: solid purple 5px;
   border-radius: 18px;
-  font-family: $font-main;
+  // font-family: $font-main;
   padding: 0.5rem;
   margin: 1rem;
   font-size: 1.1rem;
@@ -42,17 +42,17 @@
   width: 80px;
   height: 80px;
   border-radius: 80px;
-  background-color: $orange;
+  background-color: orange;
 }
 
 .buton-dice {
   grid-column: 1/1;
   grid-row: 3/4;
   color: white;
-  background-color: $purple;
+  background-color: purple;
   @include button();
   &:hover {
-    background-color: $grey;
+    background-color: grey;
     color: white;
   }
 }
@@ -70,12 +70,12 @@
 }
 .buton-reload {
   @include button();
-  color: $purple;
+  color: purple;
   background-color: white;
   grid-column: 7/8;
   grid-row: 3/4;
   &:hover {
-    background-color: $grey;
+    background-color: grey;
     color: white;
   }
 }

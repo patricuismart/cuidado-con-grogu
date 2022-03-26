@@ -1,18 +1,18 @@
 .text {
-  @include text();
+  // @include text();
   margin: 3rem;
   @media all and (min-width: 768px) {
     margin: 0.5rem;
   }
   .button-home {
-    @include button();
+    // @include button();
   }
   .text-end {
-    color: $purple;
-    font-family: $font-main;
+    color: purple;
+    // font-family: $font-main;
     margin: 1rem;
     font-size: 1.5rem;
     padding-bottom: 3rem;
-    color: $orange;
+    color: orange;
   }
 }

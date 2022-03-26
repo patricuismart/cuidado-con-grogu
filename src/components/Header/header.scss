@@ -2,8 +2,8 @@
   width: 100%;
   padding-top: 1.2rem;
   padding-bottom: 1rem;
-  color: $white;
-  background-color: $grey;
+  color: white;
+  background-color: grey;
 
   &--nav {
     display: grid;
@@ -21,7 +21,7 @@
       height: 15vh;
 
       &__link {
-        color: $white;
+        color: white;
       }
     }
   }
@@ -29,12 +29,12 @@
     cursor: pointer;
     text-align: center;
     padding: 0.6rem;
-    background-color: $color-secondary;
+    background-color: grey;
     margin-bottom: 0.5rem;
     font-size: 1.3rem;
     border-radius: 0.5rem;
     transition: all ease 0.3s;
-    color: $purple;
+    color: purple;
 
     @media all and (min-width: 768px) {
       font-size: 2rem;
@@ -42,11 +42,11 @@
       margin-bottom: 0;
     }
     &:hover {
-      border: solid 0.15rem $aqua;
+      border: solid 0.15rem aqua;
     }
     &:focus {
       transition: all ease 0.3s;
-      background-color: $blue;
+      background-color: blue;
     }
   }
 }
