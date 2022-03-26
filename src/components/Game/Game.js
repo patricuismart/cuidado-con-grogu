@@ -1,11 +1,9 @@
 import './game.scss';
 import { useState } from 'react/cjs/react.development';
 
-// User wins game component
 import Winner from '../Winner/Winner';
 import GameOver from '../GameOver/Gameover';
 
-//images
 import grogu from '../../images/grogu.png';
 
 const GroguProfile = () => {
@@ -16,7 +14,6 @@ const GroguProfile = () => {
 
 const GameComponent = () => {
   console.log('Game');
-  //Initial values before rolling  dice
   const [gameState, setGameState] = useState({
     grogu: 0,
     cookies: 3,
@@ -24,15 +21,13 @@ const GameComponent = () => {
     eggs: 3,
   });
 
-  // States
   const [number, setNumber] = useState(0);
   const [stateWinner, setStateWinner] = useState(false);
   const [stateGameover, setStateGameover] = useState(false);
   const [userMessage, setUserMessage] = useState('');
-  const [groguAvances, setGroguAvances] = useState(-1);
 
   //***FUNCTIONS***//
-  // Math Function for random number
+
   const generateRandomNumber = () => {
     const max = 4;
     const min = 1;
@@ -41,18 +36,15 @@ const GameComponent = () => {
     return randomNumber;
   };
 
-  // function reset & reload game
   const handleReset = () => {
     //window.location.reload(true);
     setGameState();
   };
 
-  // User Game Over, grogu eats all food
   const gameoverMode = () => {
     setStateGameover(true);
   };
 
-  //Test empty stock of food, if yes, user wins
   const checkUserWins = () => {
     if (
       gameState.cookies === 0 &&
