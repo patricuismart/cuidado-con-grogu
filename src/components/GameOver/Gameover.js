@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import '../styles/main.scss';
+import './gameover.scss';
 import GroguGameover from '../images/GroguGameover.gif';
 
 const Gameover = ({ handleReset }) => {

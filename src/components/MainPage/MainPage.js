@@ -1,4 +1,4 @@
-import '../styles/main.scss';
+import './body.scss';
 import { NavLink } from 'react-router-dom';
 
 const MainPage = () => {

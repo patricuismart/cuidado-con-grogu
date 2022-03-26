@@ -1,4 +1,4 @@
-import '../styles/main.scss';
+import './rules.scss';
 import { NavLink } from 'react-router-dom';
 const RulesComponent = () => {
   return (

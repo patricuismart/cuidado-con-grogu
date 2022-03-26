@@ -1,10 +1,9 @@
-import style from '../styles/main.scss';
+import './game.scss';
 import { useState } from 'react/cjs/react.development';
 
 // User wins game component
 import Winner from '../Winner/Winner';
 import GameOver from '../GameOver/Gameover';
-import GroguAvances from '../GorguAvances';
 
 //images
 import grogu from '../images/grogu.png';
