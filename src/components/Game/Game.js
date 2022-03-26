@@ -100,21 +100,7 @@ const GameComponent = () => {
   return (
     <>
       <section className="board">
-        {/* <input
-          className="result-dice"
-          placeholder="..."
-          type="text"
-          value={number}
-          onChange={handleDice}
-        /> */}
         <div className="result-dice">{number === 0 ? '...' : number}</div>
-        {/* <input
-          className="user-message"
-          placeholder="user message"
-          type="text"
-          value={userMessage}
-          onChange={handleDice}
-        /> */}
         <div className="user-message">{userMessage}</div>
         <input
           className="buton-dice"
