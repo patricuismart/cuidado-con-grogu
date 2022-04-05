@@ -64,7 +64,11 @@ const GameComponent = () => {
     if (gameState[currentStock] === 0) {
       setUserMessage(`Ya no quedan ${currentStock}, sigue tirando!`);
     } else {
-      gameState[currentStock] = gameState[currentStock] - 1;
+      const newGameState = {
+        ...gameState,
+        [stockNumber[newNumber]]: gameState[currentStock] - 1,
+      };
+      setGameState(newGameState);
     }
   };
 
